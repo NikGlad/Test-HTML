@@ -1,0 +1,42 @@
+body{
+   background-color: aqua;
+}
+header{
+   font-size: 300%;
+}
+li{
+   font-size: 300%;
+}
+h1{
+   margin-right: 20%;
+   text-align: center;
+   font-size: 300%;
+}
+p{
+   font-size: 300%;
+}
+  td {
+   text-align: center; /* Выравниваем текст по центру ячейки */
+   font-size: 500%;  /*Размер шрифта в рамке/
+  }
+  table {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    margin: auto;
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+   TH {
+    background: #d11407; /* Цвет фона */
+   }
+    .footer{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      font-size: 500%;
+      text-align: center;
+    }
