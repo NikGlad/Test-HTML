@@ -1,5 +1,5 @@
 body{
-   background-color: aqua;
+   background-color: #a9c3e6;
 }
 header{
    font-size: 300%;
@@ -13,11 +13,11 @@ h1{
    font-size: 300%;
 }
 p{
-   font-size: 300%;
+   font-size: 300%; /*Размер шрифта параграфа*/
 }
   td {
    text-align: center; /* Выравниваем текст по центру ячейки */
-   font-size: 500%;  /*Размер шрифта в рамке/
+   font-size: 1000%;  /*Размер шрифта в рамке/
   }
   table {
     width: 300px; /* Ширина таблицы */
@@ -25,18 +25,17 @@ p{
     margin: auto;
    }
    TD, TH {
-    padding: 3px; /* Поля вокруг содержимого таблицы */
+    padding: 3px; /*Поля вокруг содержимого таблицы */
     border: 1px solid black; /* Параметры рамки */
    }
    TH {
     background: #d11407; /* Цвет фона */
    }
     .footer{
-      position: absolute;
       left: 0;
       bottom: 0;
       width: 100%;
       height: 80px;
-      font-size: 500%;
+      font-size: 1000%;
       text-align: center;
     }
