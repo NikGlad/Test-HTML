@@ -8,7 +8,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Test HTML</title>
 </head>
-<body>
+<polygo>
    <!--Header-->
    <header>
       hai
@@ -49,8 +49,152 @@
          <td>Шурик</td>
         </tr>
    </table>
-   <div class="footer">
-      good bay
-   </div>
+   <!--Геолокация-->
+   <showLocation>
+      Укажите адрес
+   </showLocation>
+   <!--Перетаскивание-->
+   <script>
+      function allowDrop(ev) {
+          ev.preventDefault();
+      }
+      
+      function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+      }
+         </script>
+      
+         <div id="box" ondrop="drop(event)"
+         ondragover="allowDrop(event)"
+         style="border:1px solid black; 
+         width:200px; height:200px"></div>
+      
+         <img id="image" src="1.png" draggable="true"
+         ondragstart="drag(event)" width="150" height="50" alt="" />
+<!--SVG-->
+<svg width="2000" height="200">
+   <circle cx="80" cy="80" r="50" fill="green" />
+</svg>
+<rect width="2000" height="200">
+   <rect width="300" height="100" 
+     x="20" y="20" fill="red" />
+</svg>
+<svg width="400" height="200">
+   <line x1="10" y1="10" x2="200" y2="100" 
+       style="stroke:#000000; stroke-linecap:round; 
+       stroke-width:20"  />
+</svg>
+<svg width="2000" height="50">
+   <polyline style="stroke-linejoin:miter; stroke:black; 
+       stroke-width:12; fill: none;"
+       points="100 100, 150 150, 200 100" />
+</svg>
+<svg height="500" width="1000">
+   <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:green" />
+</svg>
+<svg width="2000" height="200">
+   <polygon points="100 100, 200 200, 300 0, 150 150, 90 30" 
+         style="fill: green; stroke:black;" />
+   </svg>
+   <svg width="1000" height="250">
+      <rect width="150" height="150" fill="orange">
+          <animate attributeName="x" from="0" to="2000"
+        dur="1s" fill="freeze" repeatCount="10"/> 
+      </rect>
+  </svg>
+  <svg width="500" height="500">
+   <path d="M 0 0 L200 200 L200 0 Z" style="stroke:rgb(199, 22, 22);  fill:none;" />
+   </svg>
+<!--canvas-->
+<canvas id="canvas1" 
+   width="400" height="300"></canvas> 
+
+   <canvas id="canvas1" width="400" height="300">
+   </canvas> 
+<script>
+   var c=document.getElementById("canvas1");
+   var ctx=c.getContext("2d");
+   ctx.fillRect(300,50,100,100);
+</script>
+</canvas>
+<canvas id="canvas1" width="400" height="300">
+</canvas> 
+<script>
+var c=document.getElementById("canvas1");
+var ctx=c.getContext("2d");
+ctx.font="bold 50px Tahoma";
+ctx.textAlign="start";
+ctx.fillText("start", 200, 30);
+</script>
+<!--rotate-->
+<canvas id="canvas1" width="400" height="300">
+</canvas> 
+<script>
+var c=document.getElementById("canvas1");
+var ctx=c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(10,10, 100, 100);
+
+ctx.rotate( (Math.PI / 180) * 25);  //rotate 25 degrees.
+
+ctx.fillStyle = "#0000FF";
+ctx.fillRect(50, 10, 100, 100);
+</script>
+<!--scale-->
+    <canvas id="canvas1" width="600" height="400">
+        </canvas> 
+    <script>
+        var canvas = document.getElementById('canvas1');
+        ctx =canvas.getContext('2d');
+        ctx.font="bold 22px Tahoma";
+        ctx.textAlign="start";
+        ctx.fillText("start", 10, 30);
+        ctx.translate(100, 150);
+        ctx.fillText("after translate", 0, 0);
+        ctx.rotate(1);
+        ctx.fillText("after rotate", 0, 0);
+        ctx.scale(1.5, 4);
+        ctx.fillText("after scale", 0,20);
+    </script>
+    <!--HTML5 Forms-->
+    <form>
+      <label>Your name:</label>
+      <input id="user" name="username" type="text" />
+  </form>
+  <!--placeholder-->
+  <form>
+   <label for="email">Your e-mail address: </label>
+   <input type="text" name="email" placeholder="email@example.com" />
+</form>
+<form>
+   <label for="email">Your e-mail address: </label>
+   <input type="text" name="email" autofocus />
+</form>
+<form autocomplete="off">
+   <label for="e-mail">Your e-mail address: </label>
+   <input name="Email" type="text" required />
+   <input type="submit" value="Submit"/>
+</form>
+<input id="mysearch" name="searchitem" type="search" />
+<input id="car" type="text" list="colors" />
+<datalist id="colors">
+    <option value="Red">
+    <option value="Green">
+    <option value="Yellow">
+</datalist>
+<input id="email" name="email" type="email" placeholder="example@example.com" />
+<br />
+<input id="url" name="url" type="url" placeholder="example.com" />
+<br />
+<input id="tel" name="tel" type="tel" placeholder="555.555.1211" />
+<div class="footer">
+   good bay
+</div>
 </body>
 </html>
